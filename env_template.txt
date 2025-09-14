@@ -1,0 +1,16 @@
+# Snowflake Environment Variables Template
+# Copy this content to a .env file and fill in your actual credentials
+
+# Snowflake Connection Configuration
+SNOWFLAKE_ACCOUNT=your_account_here
+SNOWFLAKE_USER=your_username_here
+SNOWFLAKE_PASSWORD=your_password_here
+SNOWFLAKE_EMAIL=your_email_here
+SNOWFLAKE_ROLE=ACCOUNTADMIN
+SNOWFLAKE_WAREHOUSE=COMPUTE_WH
+SNOWFLAKE_DATABASE=tasty_bytes_sample_data
+SNOWFLAKE_SCHEMA=raw_pos
+
+# Connection strings (for reference)
+SNOWFLAKE_ODBC_STRING=Driver={SnowflakeDSIIDriver};Server=your_account.snowflakecomputing.com;Database=<none selected>;uid=your_username;pwd=your_password
+SNOWFLAKE_JDBC_STRING=jdbc:snowflake://your_account.snowflakecomputing.com/?user=your_username&warehouse=<none selected>&db=<none selected>&schema=<none selected>&password=your_password
