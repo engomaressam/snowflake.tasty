@@ -1,38 +1,43 @@
 #!/usr/bin/env python3
 """
-Setup environment variables for Snowflake connection
+Create a local .env file for the Snowflake connection.
+
+Values come from the environment when set, otherwise you are prompted.
+The .env file is git-ignored; never commit it.
 """
 
-def create_env_file():
-    """
-    Create .env file with actual Snowflake credentials
-    """
-    env_content = """# Snowflake Connection Configuration
-# DO NOT COMMIT THIS FILE TO GIT - Contains sensitive credentials
+import os
+from getpass import getpass
 
-# Account details
-SNOWFLAKE_ACCOUNT=<your-account-identifier>
-SNOWFLAKE_USER=<your-username>
-SNOWFLAKE_PASSWORD=<your-password>
-SNOWFLAKE_EMAIL=<your-email>
-SNOWFLAKE_ROLE=ACCOUNTADMIN
-SNOWFLAKE_WAREHOUSE=COMPUTE_WH
-SNOWFLAKE_DATABASE=tasty_bytes_sample_data
-SNOWFLAKE_SCHEMA=raw_pos
+FIELDS = [
+    ("SNOWFLAKE_ACCOUNT", "Account identifier (orgname-accountname)", False, None),
+    ("SNOWFLAKE_USER", "User name", False, None),
+    ("SNOWFLAKE_PASSWORD", "Password", True, None),
+    ("SNOWFLAKE_ROLE", "Role", False, "ACCOUNTADMIN"),
+    ("SNOWFLAKE_WAREHOUSE", "Warehouse", False, "COMPUTE_WH"),
+    ("SNOWFLAKE_DATABASE", "Database", False, "tasty_bytes_sample_data"),
+    ("SNOWFLAKE_SCHEMA", "Schema", False, "raw_pos"),
+]
 
-# Connection strings (for reference)
-SNOWFLAKE_ODBC_STRING=Driver={SnowflakeDSIIDriver};Server=<your-account-identifier>.snowflakecomputing.com;Database=<none selected>;uid=<your-username>;pwd=<your-password>
-SNOWFLAKE_JDBC_STRING=jdbc:snowflake://<your-account-identifier>.snowflakecomputing.com/?user=<your-username>&warehouse=<none selected>&db=<none selected>&schema=<none selected>&password=<your-password>
-"""
-    
+
+def create_env_file(path=".env"):
+    """Write the Snowflake connection settings to a local .env file."""
+    lines = ["# Snowflake connection settings (local only, git-ignored)"]
+    for key, label, secret, default in FIELDS:
+        value = os.environ.get(key)
+        if not value:
+            prompt = f"{label}" + (f" [{default}]" if default else "") + ": "
+            value = (getpass(prompt) if secret else input(prompt)).strip() or (default or "")
+        lines.append(f"{key}={value}")
     try:
-        with open('.env', 'w') as f:
-            f.write(env_content)
-        print("✅ .env file created successfully with Snowflake credentials")
+        with open(path, "w") as f:
+            f.write("\n".join(lines) + "\n")
+        print(f"✅ {path} written")
         return True
-    except Exception as e:
-        print(f"❌ Error creating .env file: {e}")
+    except OSError as e:
+        print(f"❌ Error creating {path}: {e}")
         return False
+
 
 if __name__ == "__main__":
     create_env_file()
