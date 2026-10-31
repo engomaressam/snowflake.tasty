@@ -20,10 +20,9 @@ def check_for_credentials():
         r'password\s*=\s*[\'"][^\'"]+[\'"]',
         r'user\s*=\s*[\'"][^\'"]+[\'"]',
         r'account\s*=\s*[\'"][^\'"]+[\'"]',
-        r'<your-username>',
-        r'<your-password>',
-        r'<your-account-identifier>',
-        r'<your-email>'
+        r'[a-z]{7}-[a-z]{2,3}\d{5}',  # Snowflake account identifier
+        r'snowflakecomputing\.com/\?user=',
+        r'pwd=[^<;]+;'
     ]
     
     # Get all Python files

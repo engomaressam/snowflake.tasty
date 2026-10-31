@@ -68,20 +68,18 @@ This repository contains all code, scripts, SQL, and documentation related to Ta
 
 ---
 
-## 5. Credentials (FOR HANDOVER ONLY: COPY THIS TO A PRIVATE LOCATION, NOT THE REPO!)
+## 5. Credentials
+Credentials are never stored in this repo. Run `python scripts/setup_env.py` to write a local, git-ignored `.env` with:
 
-> The actual Snowflake connection data is for private transfer only. Copy this out before sharing repo.
-> 
-> Example:
-> 
-> SNOWFLAKE_ACCOUNT=<your-account-identifier>
-> SNOWFLAKE_USER=<your-username>
-> SNOWFLAKE_PASSWORD=<your-password>
-> SNOWFLAKE_EMAIL=<your-email>
-> SNOWFLAKE_ROLE=ACCOUNTADMIN
-> SNOWFLAKE_WAREHOUSE=COMPUTE_WH
-> SNOWFLAKE_DATABASE=tasty_bytes_sample_data
-> SNOWFLAKE_SCHEMA=raw_pos
+```
+SNOWFLAKE_ACCOUNT=<your-account-identifier>
+SNOWFLAKE_USER=<your-username>
+SNOWFLAKE_PASSWORD=<your-password>
+SNOWFLAKE_ROLE=ACCOUNTADMIN
+SNOWFLAKE_WAREHOUSE=COMPUTE_WH
+SNOWFLAKE_DATABASE=tasty_bytes_sample_data
+SNOWFLAKE_SCHEMA=raw_pos
+```
 
 ---
 
