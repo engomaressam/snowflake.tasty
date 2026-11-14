@@ -20,11 +20,7 @@ snowflake/
 ├── scripts/              # Python scripts for Snowflake operations
 │   ├── snowflake_connection.py
 │   ├── snowflake_config.py
-│   ├── tasty_bytes_setup.py
-│   ├── answer_questions.py
-│   ├── warehouse_questions.py
-│   ├── ingestion_questions.py
-│   └── database_questions.py
+│   └── tasty_bytes_setup.py
 ├── sql/                  # SQL scripts and queries
 │   ├── complete_assignment.sql
 │   ├── quick_setup.sql
@@ -55,20 +51,9 @@ snowflake/
    # Never commit the .env file to Git!
    ```
 
-3. **Run Assignments**
+3. **Load the sample data**
    ```bash
-   # Data setup and analysis
    python scripts/tasty_bytes_setup.py
-   python scripts/answer_questions.py
-   
-   # Warehouse management
-   python scripts/warehouse_questions.py
-   
-   # Data ingestion
-   python scripts/ingestion_questions.py
-   
-   # Database operations
-   python scripts/database_questions.py
    ```
 
 ## Assignments Completed

@@ -63,8 +63,6 @@ snowflake/
 ├── snowflake_connection.py  # Basic connection utility
 ├── snowflake_config.py     # Configuration management
 ├── tasty_bytes_setup.py    # Tasty Bytes data setup
-├── answer_questions.py     # Assignment questions solver
-├── warehouse_questions.py  # Warehouse management questions
 ├── 
 ├── # Generated Files
 ├── step_01_*.sql           # Individual step SQL files
@@ -80,15 +78,6 @@ snowflake/
 - **Description**: Creates database, schema, table, and loads sample data
 - **Run**: `python tasty_bytes_setup.py`
 
-### 2. Data Analysis Questions
-- **File**: `answer_questions.py`
-- **Description**: Answers multiple choice questions about the loaded data
-- **Run**: `python answer_questions.py`
-
-### 3. Warehouse Management
-- **File**: `warehouse_questions.py`
-- **Description**: Demonstrates warehouse creation, modification, and management
-- **Run**: `python warehouse_questions.py`
 
 ## Usage
 

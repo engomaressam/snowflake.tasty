@@ -24,11 +24,9 @@ This repository contains completed Snowflake assignments and exercises, includin
    # Never commit the .env file to Git!
    ```
 
-3. **Run Assignments**
+3. **Load the sample data**
    ```bash
    python tasty_bytes_setup.py      # Data setup
-   python answer_questions.py       # Analysis questions
-   python warehouse_questions.py    # Warehouse management
    ```
 
 ## Project Structure
@@ -36,8 +34,6 @@ This repository contains completed Snowflake assignments and exercises, includin
 - **`complete_assignment.sql`** - Complete SQL assignment ready for Snowflake Worksheets
 - **`snowflake_connection.py`** - Secure connection utility using environment variables
 - **`tasty_bytes_setup.py`** - Tasty Bytes sample data setup
-- **`answer_questions.py`** - Data analysis questions solver
-- **`warehouse_questions.py`** - Warehouse management exercises
 - **`SETUP_GUIDE.md`** - Detailed setup and security guide
 
 ## Assignments Completed
