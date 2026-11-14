@@ -17,7 +17,6 @@ snowflake/
 │   ├── SETUP_GUIDE.md
 │   ├── MANUAL_SETUP_GUIDE.md
 │   ├── STEP_BY_STEP_GUIDE.md
-│   └── SECURITY_SUMMARY.md
 ├── scripts/              # Python scripts for Snowflake operations
 │   ├── snowflake_connection.py
 │   ├── snowflake_config.py
