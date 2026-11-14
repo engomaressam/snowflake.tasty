@@ -2,7 +2,7 @@
 
 This repository contains Snowflake assignments and exercises completed using Python and the Snowflake connector.
 
-## 🔐 Security Setup
+## Security Setup
 
 **IMPORTANT**: This repository is configured for security. All sensitive credentials are stored in environment variables and are NOT committed to Git.
 
@@ -30,7 +30,7 @@ This repository contains Snowflake assignments and exercises completed using Pyt
    - The `.env` file is automatically ignored by Git
    - Never commit sensitive credentials to version control
 
-## 🚀 Installation
+## Installation
 
 1. **Clone the repository**:
    ```bash
@@ -45,7 +45,7 @@ This repository contains Snowflake assignments and exercises completed using Pyt
 
 3. **Set up environment variables** (see Security Setup above)
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 snowflake/
@@ -73,7 +73,7 @@ snowflake/
 └── STEP_BY_STEP_GUIDE.md   # Detailed step-by-step guide
 ```
 
-## 🎯 Assignments Completed
+## Assignments Completed
 
 ### 1. Tasty Bytes Sample Data Setup
 - **File**: `tasty_bytes_setup.py`
@@ -90,7 +90,7 @@ snowflake/
 - **Description**: Demonstrates warehouse creation, modification, and management
 - **Run**: `python warehouse_questions.py`
 
-## 🔧 Usage
+## Usage
 
 ### Running Individual Scripts
 
@@ -112,28 +112,28 @@ snowflake/
    - Create new worksheet
    - Paste and run SQL
 
-## 🛡️ Security Features
+## Security Features
 
-- ✅ **No hardcoded credentials** in any code files
-- ✅ **Environment variables** for all sensitive data
-- ✅ **`.env` file ignored** by Git
-- ✅ **Comprehensive `.gitignore`** for security
-- ✅ **Error handling** for missing environment variables
+- **No hardcoded credentials** in any code files
+- **Environment variables** for all sensitive data
+- **`.env` file ignored** by Git
+- **Comprehensive `.gitignore`** for security
+- **Error handling** for missing environment variables
 
-## 📋 Requirements
+## Requirements
 
 - Python 3.7+
 - Snowflake account with ACCOUNTADMIN role
 - Required Python packages (see `requirements.txt`)
 
-## 🤝 Contributing
+## Contributing
 
 1. **Never commit credentials** to the repository
 2. **Use environment variables** for all sensitive data
 3. **Test with your own credentials** before submitting
 4. **Follow the security guidelines** outlined in this guide
 
-## 📞 Support
+## Support
 
 If you encounter issues:
 1. Check that your `.env` file is properly configured
@@ -141,7 +141,7 @@ If you encounter issues:
 3. Ensure you have the required permissions (ACCOUNTADMIN role)
 4. Check the error messages for specific guidance
 
-## 🎉 Success!
+## Success!
 
 Once set up correctly, you should be able to:
 - Connect to Snowflake securely
@@ -149,4 +149,4 @@ Once set up correctly, you should be able to:
 - Execute SQL commands manually
 - Complete all Snowflake exercises
 
-Happy coding! 🚀
+Happy coding!

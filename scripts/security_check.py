@@ -12,7 +12,7 @@ def check_for_credentials():
     """
     Check all Python files for hardcoded credentials
     """
-    print("🔍 Security Check: Scanning for hardcoded credentials...")
+    print("Security Check: Scanning for hardcoded credentials...")
     print("="*60)
     
     # Patterns to look for
@@ -31,7 +31,7 @@ def check_for_credentials():
     issues_found = False
     
     for file_path in python_files:
-        print(f"\n📁 Checking {file_path}...")
+        print(f"\nChecking {file_path}...")
         
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
@@ -46,26 +46,26 @@ def check_for_credentials():
                             file_issues.append(f"  Line {i}: {line.strip()}")
                 
                 if file_issues:
-                    print(f"  ❌ Found {len(file_issues)} potential issues:")
+                    print(f"  Found {len(file_issues)} potential issues:")
                     for issue in file_issues:
                         print(issue)
                     issues_found = True
                 else:
-                    print(f"  ✅ No hardcoded credentials found")
+                    print(f"  No hardcoded credentials found")
                     
         except Exception as e:
-            print(f"  ⚠️  Error reading file: {e}")
+            print(f"   Error reading file: {e}")
     
     print("\n" + "="*60)
     if issues_found:
-        print("❌ SECURITY ISSUES FOUND!")
+        print("SECURITY ISSUES FOUND!")
         print("Please review and remove any hardcoded credentials.")
         print("Use environment variables instead.")
     else:
-        print("✅ SECURITY CHECK PASSED!")
+        print("SECURITY CHECK PASSED!")
         print("No hardcoded credentials found in Python files.")
     
-    print("\n🔐 Security Recommendations:")
+    print("\nSecurity Recommendations:")
     print("1. All credentials should be in .env file")
     print("2. .env file should be in .gitignore")
     print("3. Use os.getenv() to read environment variables")

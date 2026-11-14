@@ -2,11 +2,11 @@
 
 This repository contains completed Snowflake assignments and exercises, including data setup, analysis, warehouse management, and database operations.
 
-## 🔐 Security First
+## Security First
 
 **IMPORTANT**: This repository is configured for security. All sensitive credentials are stored in environment variables and are NOT committed to Git.
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 snowflake/
@@ -38,7 +38,7 @@ snowflake/
 └── README.md            # This file
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 1. **Clone and Setup**
    ```bash
@@ -72,64 +72,64 @@ snowflake/
    python scripts/database_questions.py
    ```
 
-## 🎯 Assignments Completed
+## Assignments Completed
 
-### ✅ Tasty Bytes Sample Data Setup
+### Tasty Bytes Sample Data Setup
 - Database and schema creation
 - Table structure with proper data types
 - S3 stage setup and data loading
 - 100+ menu items loaded successfully
 
-### ✅ Data Analysis Questions
+### Data Analysis Questions
 - Item category and subcategory analysis
 - Price analysis by subcategory
 - Truck brand popularity analysis
 
-### ✅ Warehouse Management
+### Warehouse Management
 - Warehouse creation and configuration
 - Size modification and auto-suspend settings
 - Warehouse switching and management
 
-### ✅ Data Ingestion
+### Data Ingestion
 - External stage creation
 - File format configuration
 - Data loading from S3
 - 450+ truck records loaded
 
-### ✅ Database Operations
+### Database Operations
 - Database creation and management
 - Schema operations
 - Database switching and undrop operations
 
-## 🛡️ Security Features
+## Security Features
 
-- ✅ **No hardcoded credentials** in any code files
-- ✅ **Environment variables** for all sensitive data
-- ✅ **`.env` file ignored** by Git
-- ✅ **Comprehensive `.gitignore`** for security
-- ✅ **Error handling** for missing environment variables
+- **No hardcoded credentials** in any code files
+- **Environment variables** for all sensitive data
+- **`.env` file ignored** by Git
+- **Comprehensive `.gitignore`** for security
+- **Error handling** for missing environment variables
 
-## 📋 Requirements
+## Requirements
 
 - Python 3.7+
 - Snowflake account with ACCOUNTADMIN role
 - Required Python packages (see `requirements.txt`)
 
-## 📖 Documentation
+## Documentation
 
 - **`docs/SETUP_GUIDE.md`** - Complete setup instructions
 - **`security/env_template.txt`** - Environment variables template
 - **`sql/`** - SQL scripts for manual execution
 - **`scripts/`** - Python automation scripts
 
-## 🤝 Contributing
+## Contributing
 
 1. **Never commit credentials** to the repository
 2. **Use environment variables** for all sensitive data
 3. **Test with your own credentials** before submitting
 4. **Follow the security guidelines** in `docs/SETUP_GUIDE.md`
 
-## 🎉 Success!
+## Success!
 
 This repository demonstrates:
 - Secure Snowflake connectivity
@@ -139,4 +139,4 @@ This repository demonstrates:
 - SQL query execution
 - Best practices for credential management
 
-Ready for GitHub publication! 🚀
+Ready for GitHub publication!

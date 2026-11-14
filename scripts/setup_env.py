@@ -32,10 +32,10 @@ def create_env_file(path=".env"):
     try:
         with open(path, "w") as f:
             f.write("\n".join(lines) + "\n")
-        print(f"✅ {path} written")
+        print(f"{path} written")
         return True
     except OSError as e:
-        print(f"❌ Error creating {path}: {e}")
+        print(f"Error creating {path}: {e}")
         return False
 
 

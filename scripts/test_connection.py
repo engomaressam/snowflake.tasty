@@ -40,7 +40,7 @@ def test_connection():
                 role=role,
                 warehouse=warehouse
             )
-            print(f"✅ SUCCESS with account format: {account_format}")
+            print(f"SUCCESS with account format: {account_format}")
             
             # Test a simple query
             cursor = conn.cursor()
@@ -53,7 +53,7 @@ def test_connection():
             return account_format
             
         except Exception as e:
-            print(f"❌ Failed with {account_format}: {e}")
+            print(f"Failed with {account_format}: {e}")
     
     return None
 
@@ -62,6 +62,6 @@ if __name__ == "__main__":
     successful_format = test_connection()
     
     if successful_format:
-        print(f"\n🎉 Connection successful! Use account format: {successful_format}")
+        print(f"\nConnection successful! Use account format: {successful_format}")
     else:
-        print("\n❌ All connection attempts failed. Please check your credentials.")
+        print("\nAll connection attempts failed. Please check your credentials.")

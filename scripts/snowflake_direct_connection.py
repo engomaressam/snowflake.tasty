@@ -52,15 +52,15 @@ def connect_and_run_sql():
                 role=method['role'],
                 warehouse=method['warehouse']
             )
-            print(f"✅ SUCCESS with {method['name']}!")
+            print(f"SUCCESS with {method['name']}!")
             successful_method = method
             break
         except Exception as e:
-            print(f"❌ Failed: {e}")
+            print(f"Failed: {e}")
             continue
     
     if not conn:
-        print("\n❌ All connection methods failed. Please check your credentials.")
+        print("\nAll connection methods failed. Please check your credentials.")
         return False
     
     # SQL commands for Tasty Bytes setup
@@ -105,7 +105,7 @@ GROUP BY 1,2
 ORDER BY 3 DESC;"""
     ]
     
-    print(f"\n🎉 Connected successfully using {successful_method['name']}!")
+    print(f"\nConnected successfully using {successful_method['name']}!")
     print("Executing Tasty Bytes setup commands...")
     
     try:
@@ -122,31 +122,31 @@ ORDER BY 3 DESC;"""
                     if results:
                         print(f"Results: {results}")
                     else:
-                        print("✅ Command executed successfully")
+                        print("Command executed successfully")
                 except:
-                    print("✅ Command executed successfully")
+                    print("Command executed successfully")
                     
             except Exception as e:
-                print(f"❌ Error in step {i}: {e}")
+                print(f"Error in step {i}: {e}")
                 # Continue with next command
                 continue
         
         cursor.close()
         conn.close()
-        print("\n🎉 Tasty Bytes setup completed!")
+        print("\nTasty Bytes setup completed!")
         return True
         
     except Exception as e:
-        print(f"❌ Error during execution: {e}")
+        print(f"Error during execution: {e}")
         if conn:
             conn.close()
         return False
 
 if __name__ == "__main__":
-    print("🚀 Starting Snowflake Tasty Bytes Setup...")
+    print("Starting Snowflake Tasty Bytes Setup...")
     success = connect_and_run_sql()
     
     if success:
-        print("\n✅ Assignment completed successfully!")
+        print("\nAssignment completed successfully!")
     else:
-        print("\n❌ Assignment failed. Please check the errors above.")
+        print("\nAssignment failed. Please check the errors above.")

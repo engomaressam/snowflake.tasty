@@ -200,11 +200,11 @@ ORDER BY 3 DESC;
 ## Success Criteria
 
 After completing all steps, you should have:
-- ✅ Database: tasty_bytes_sample_data
-- ✅ Schema: raw_pos  
-- ✅ Table: menu (with 100+ rows of data)
-- ✅ Stage: blob_stage (pointing to S3)
-- ✅ Verification queries showing sample data
+- Database: tasty_bytes_sample_data
+- Schema: raw_pos  
+- Table: menu (with 100+ rows of data)
+- Stage: blob_stage (pointing to S3)
+- Verification queries showing sample data
 
 ## Next Steps
 
